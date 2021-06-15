@@ -1,0 +1,72 @@
+@import url("https://fonts.googleapis.com/css?family=Muli&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Muli", sans-serif;
+  overflow: hidden;
+  margin: 0;
+  background: linear-gradient(229.99deg, #ff2600 -16%, #2e2e2e 75%);
+  color: white;
+}
+
+main {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.title {
+  width: 50%;
+  text-align: center;
+}
+
+.title h1 {
+  font-size: 50px;
+}
+
+.title h1:hover {
+  font-size: 75px;
+  transition: all 100ms ease-in-out;
+}
+
+.list {
+  width: 50%;
+  text-align: center;
+  overflow-y: scroll;
+}
+
+.list-inner {
+  list-style: none;
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.item {
+  width: 100%;
+  font-size: 30px;
+  margin: 30px;
+  height: 90px;
+  transition: all 500ms ease-in-out;
+}
+
+.item a {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-decoration: none;
+}
+
+.item :hover {
+  background: linear-gradient(229.99deg, #2e2e2e -16%, #000000 75%);
+  border-radius: 25px;
+}
