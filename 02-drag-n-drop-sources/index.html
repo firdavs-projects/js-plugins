@@ -6,23 +6,31 @@
     <link rel="stylesheet" href="styles.css" />
     <title>Drag & Drop | Проект 2</title>
   </head>
-  <body>
-    <div>
+  <body data-trash="true">
+    <div data-trash="yes">
       <div class="row">
-          <div class="col-header start">Начать</div>
-          <div class="col-header progress">В процессе</div>
-          <div class="col-header done">Готовы</div>
+        <div class="col-header start">Начать</div>
+        <div class="col-header progress">В процессе</div>
+        <div class="col-header done">Готовы</div>
       </div>
 
-      <div class="row">
-        <div class="placeholder">
-          <div class="item" draggable="true">Перетащи меня</div>
+      <div class="row" id="cards">
+        <div class="placeholder" data-id="1">
+          <div class="card" draggable="true">One</div>
+          <div class="card" draggable="true">Two</div>
+          <div class="card" draggable="true">Three</div>
         </div>
-        <div class="placeholder"></div>
-        <div class="placeholder"></div>
+        <div class="placeholder" data-id="2"></div>
+        <div class="placeholder" data-id="3"></div>
       </div>
-      
+
+      <div class="row" id="add-btn-list">
+        <div class="add-card" data-id="1">+ Add note</div>
+        <div class="add-card" data-id="2">+ Add note</div>
+        <div class="add-card" data-id="3">+ Add note</div>
+      </div>
     </div>
+
     <script src="./app.js"></script>
   </body>
 </html>

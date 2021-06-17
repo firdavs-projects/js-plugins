@@ -1,7 +1,7 @@
 const board = document.querySelector("#board");
 const controls = document.querySelector(".controls");
 const colors = ["#c71d1d", "#2e97ad", "#ad12db", "#e15f99", "#7edd98"];
-const SQUARES_NUMBER = 200;
+const SQUARES_NUMBER = 500;
 
 const random = document.createElement("button");
 random.classList.add("random");
@@ -79,6 +79,5 @@ function removeColor(el) {
 }
 
 function getRandomColor() {
-  const index = Math.floor(Math.random() * colors.length);
-  return colors[index];
+  return colors[Math.floor(Math.random() * colors.length)];
 }

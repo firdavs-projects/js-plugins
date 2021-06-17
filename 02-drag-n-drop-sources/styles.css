@@ -1,16 +1,22 @@
-@import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
+:root {
+  --col-width: 180px;
+  --card-width: 160px;
+  --hover-color: rgba(0, 204, 202);
+}
 
 * {
   box-sizing: border-box;
 }
 
 body {
-  font-family: "Roboto", sans-serif;
+  height: 100vh;
+  font-family: 'Roboto', sans-serif;
   background-color: #e5e5e5;
   display: flex;
   padding-top: 5rem;
   justify-content: center;
-  overflow: hidden;
   margin: 0;
 }
 
@@ -22,57 +28,87 @@ body {
 }
 
 .col-header {
-  width: 150px;
+  width: var(--col-width);
   box-shadow: 4px 4px 9px rgba(198, 198, 198, 0.36);
-  border-radius: 5px;
+  border-radius: 10px;
   padding: 0.8rem 1rem;
   color: #fff;
+  user-select: none;
 }
 
-.item {
-  width: 150px;
-  height: 66px;
+
+.placeholder {
+  width: var(--col-width);
+  min-height: 50px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 10px 0 0 0;
+}
+
+.card {
+  margin: 0 auto;
+  width: var(--card-width);
+  min-height: 50px;
   border: 1px solid #eee;
+  border-radius: 10px;
   box-shadow: 4px 4px 9px rgba(198, 198, 198, 0.36);
-  border-radius: 5px;
   background: #f7f6f7;
+  margin-bottom: 10px;
   padding: 0.8rem 1rem;
   color: #828282;
   text-align: center;
-  cursor: grab;
+  cursor: pointer;
+  user-select: none;
 }
 
-.item:active {
+.card:active {
   cursor: grabbing;
 }
 
-.placeholder {
-  width: 150px;
-  height: 66px;
+.card:focus {
+  outline: none;
+  border-color: #999;
+}
+
+.add-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: var(--col-width);
+  height: 50px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-size: 16px;
+  color: #999;
+  cursor: pointer;
+  user-select: none;
+}
+
+.add-card:hover {
+  color: var(--hover-color);
 }
 
 .start {
-  background:#ff8585;
+  background: linear-gradient(90deg, #ff85e4 0%, #229efd 179.25%);
 }
 
 .progress {
-  background: #209cff;
+  background: linear-gradient(90deg, #209cff 0%, #68e0cf 100%);
 }
 
 .done {
-  background: #5bff97;
+  background: linear-gradient(90deg, #84fab0 0%, #8fd3f4 100%);
 }
 
+
 .hold {
-  border: 5px solid #c7e7ff;
-  
+  opacity: 0.7;
 }
 
 .hide {
-  display: none;
+  visibility: hidden;
 }
 
 .hovered {
-  border-top: 3px solid #65dbff;
-  border-radius: 10px;
+  border-top: 2px solid var(--hover-color);
 }
